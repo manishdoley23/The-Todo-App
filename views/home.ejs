@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title><%= locals.title %></title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="/css/home.css" />
+	</head>
+	<body>
+		<header id="head">
+			<h1><%= title %></h1>
+		</header>
+
+		<div id="todo-input">
+			<form action="/create-todo" method="POST">
+				<div id="description-input">
+					<label for="description"><h3>Description</h3></label>
+					<input
+						id="description"
+						type="text"
+						name="description"
+						placeholder="What do you need to do?"
+						required
+					/>
+				</div>
+				<div id="category-date-input">
+					<div id="category-input">
+						<label for="categories"><h3>Category</h3></label>
+						<select name="categories" id="categories">
+							<option value="default">Choose a category</option>
+							<option value="personal">Personal</option>
+							<option value="school">School</option>
+							<option value="office">Office</option>
+							<option value="college">College</option>
+						</select>
+					</div>
+					<div id="date-input">
+						<label for="date"><h3>Due date</h3></label>
+						<input id="date" type="date" name="date" required />
+					</div>
+				</div>
+
+				<div id="add-delete-input">
+					<button type="submit">Add Task</button>
+				</div>
+			</form>
+		</div>
+
+		<div id="card">
+			<ul>
+				<% for (let i of todo_list) { %>
+				<li>
+					<p><%= i.description %></p>
+					<p><%= i.date %></p>
+					<p><%= i.categories %></p>
+				</li>
+				<% } %>
+			</ul>
+		</div>
+
+		<script type='text/javascript' src="/js/home.js"></script>
+	</body>
+</html>

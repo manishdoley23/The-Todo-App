@@ -1,0 +1,115 @@
+/* 
+COlORS:
+dark blue:- #262d36fa
+faint red:- rgb(206 89 89 / 73%)
+dark grey white:- #a39797e6
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+::-webkit-input-placeholder{
+    color: #a397971b;
+}
+
+/* header section  */
+#head{
+    letter-spacing: 5px;
+    background-color: #262d36fa;
+    height: 30vh;
+    width: 50vw;
+    /* margin: 30px; */
+    text-align: center;
+    color: rgb(206 89 89 / 73%);
+    padding: 22px;
+    border: 1px solid snow;
+    text-transform: uppercase;
+}
+#head h1{
+    font-weight: 300;
+    font-size: 34px;
+}
+
+/* body section */
+#todo-input{
+    width: 50vw;
+    background-color: #262d36fa;
+}
+/* the description */
+#description-input{
+    border: solid 1px snow;
+    border-top: 0;
+    height: 30vh;
+    /* display: relative; */
+    text-align: center;
+}
+#description-input h3{
+    text-transform: uppercase;
+    color: #a39797e6;
+    font-weight: 300;
+    letter-spacing: 8px;
+    padding: 20px;
+}
+#description-input input{
+    width: 69%;
+    border: none;
+    background: none;
+    padding-left: 20px;
+    color: #a39797e6;
+    font-size: 13px;
+    /* transition: border 0.5s; */
+}
+#description-input input:hover{
+    border-bottom: 0.5px solid #a39797e6;
+}
+#description-input input:focus{
+    outline: none;
+}
+
+/* category and date */
+#category-date-input{
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid snow;
+}
+/* category */
+#category-input{
+    width: 50%;
+    border-right: 1px solid snow;
+    text-align: center;
+}
+#category-input h3{
+    text-transform: uppercase;
+    color: #a39797e6;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 7px;
+    padding: 20px;
+}
+
+/* date */
+#date-input{
+    width: 50%;
+    text-align: center;
+}
+#date-input h3{
+    text-transform: uppercase;
+    color: #a39797e6;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    padding: 19px;
+}
+
