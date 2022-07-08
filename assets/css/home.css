@@ -27,7 +27,7 @@ body{
 #head{
     letter-spacing: 5px;
     background-color: #262d36fa;
-    height: 30vh;
+    height: 25vh;
     width: 50vw;
     /* margin: 30px; */
     text-align: center;
@@ -35,8 +35,13 @@ body{
     padding: 22px;
     border: 1px solid snow;
     text-transform: uppercase;
+    position: relative;
 }
 #head h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-weight: 300;
     font-size: 34px;
 }
@@ -47,21 +52,28 @@ body{
     background-color: #262d36fa;
 }
 /* the description */
-#description-input{
+#description-div{
+    position: relative;
     border: solid 1px snow;
     border-top: 0;
-    height: 30vh;
+    height: 15vh;
     /* display: relative; */
     text-align: center;
 }
-#description-input h3{
+#description-header-input{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -70%); */
+}
+#description-div h3{
     text-transform: uppercase;
     color: #a39797e6;
     font-weight: 300;
     letter-spacing: 8px;
     padding: 20px;
+    margin-bottom: -1vh;
 }
-#description-input input{
+#description-div input{
     width: 69%;
     border: none;
     background: none;
@@ -70,41 +82,64 @@ body{
     font-size: 13px;
     /* transition: border 0.5s; */
 }
-#description-input input:hover{
+#description-div input:hover{
     border-bottom: 0.5px solid #a39797e6;
 }
-#description-input input:focus{
+#description-div input:focus{
     outline: none;
 }
 
 /* category and date */
-#category-date-input{
-    height: 30vh;
+#category-date{
+    height: 15vh;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid snow;
 }
 /* category */
-#category-input{
+#category-div{
     width: 50%;
     border-right: 1px solid snow;
     text-align: center;
 }
-#category-input h3{
+#category-div h3{
     text-transform: uppercase;
-    color: #a39797e6;
+    color: #a39797;
     font-size: 13px;
     font-weight: 300;
     letter-spacing: 7px;
     padding: 20px;
 }
+#category-div select{
+    cursor: pointer;
+    border: 2.2px solid #a39797e6;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 14px;
+    font-family: 'Lato';
+    color:#a39797e6;
+    background: rgba(16, 14, 14, 0.71);
+    letter-spacing: 0.5px;
+}
+#category-div select:focus{
+    outline: none;
+}
+#category-div select option{
+    cursor: pointer;
+    color: #050404e6;
+    font-size: 14px;
+    font-family: 'Lato';
+    letter-spacing: 1px;
+    text-align: left;
+}
+
 
 /* date */
-#date-input{
+#date-div{
     width: 50%;
     text-align: center;
 }
-#date-input h3{
+#date-div h3{
     text-transform: uppercase;
     color: #a39797e6;
     font-size: 13px;
@@ -112,4 +147,45 @@ body{
     letter-spacing: 5px;
     padding: 19px;
 }
+#date-div input{
+    cursor: pointer;
+    border: 2.2px solid #a39797e6;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 14px;
+    color: #a39797e6;
+    background: rgba(16, 14, 14, 0.71);
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #a39797;
+    /* border: 1px solid #a39797e6; */
+    padding: 3px;
+    cursor: pointer;
+}
+
+/* Add Task */
+#add-task{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#add-task button{
+    cursor: pointer;
+    border: 2.2px solid #a39797e6;
+    border-radius: 5px;
+    background: rgba(16, 14, 14, 0.71);
+    color: #a39797e6;
+    text-transform: uppercase;
+    font-family: 'Lato';
+    padding: 10px;
+    font-size: 14px;
+}
+#add-task button:hover{
+    background: #a39797e6;
+    color: rgba(16, 14, 14, 0.71);
+}
+
+
+
 

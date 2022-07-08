@@ -17,47 +17,62 @@
 
 		<div id="todo-input">
 			<form action="/create-todo" method="POST">
-				<div id="description-input">
-					<label for="description"><h3>Description</h3></label>
-					<input
-						id="description"
-						type="text"
-						name="description"
-						placeholder="What do you need to do?"
-						required
-					/>
-				</div>
-				<div id="category-date-input">
-					<div id="category-input">
-						<label for="categories"><h3>Category</h3></label>
-						<select name="categories" id="categories">
-							<option value="default">Choose a category</option>
-							<option value="personal">Personal</option>
-							<option value="school">School</option>
-							<option value="office">Office</option>
-							<option value="college">College</option>
-						</select>
-					</div>
-					<div id="date-input">
-						<label for="date"><h3>Due date</h3></label>
-						<input id="date" type="date" name="date" required />
+				<div id="description-div">
+					<div id="description-header-input">
+						<label for="description"><h3>Description</h3></label>
+						<input
+							id="description"
+							type="text"
+							name="description"
+							placeholder="What do you need to do?"
+							required
+						/>
 					</div>
 				</div>
 
-				<div id="add-delete-input">
-					<button type="submit">Add Task</button>
+				<div id="category-date">
+					<div id="category-div">
+						<div id="category-header-input">
+							<label for="categories"><h3>Category</h3></label>
+							<select name="category" id="categories">
+								<option value="default">Choose a category</option>
+								<option value="personal">Personal</option>
+								<option value="school">School</option>
+								<option value="office">Office</option>
+								<option value="college">College</option>
+							</select>
+						</div>
+					</div>
+					<div id="date-div">
+						<div id="date-header-input">
+							<label for="date"><h3>Due date</h3></label>
+							<input id="date" type="date" name="date" required />
+						</div>
+					</div>
 				</div>
+
+				<div id="add-task">
+					<div id="add-task-btn-wrapper">
+						<button type="submit">Add Task</button>
+					</div>
+				</div>
+				
 			</form>
 		</div>
-
+		
 		<div id="card">
 			<ul>
 				<% for (let i of todo_list) { %>
-				<li>
-					<p><%= i.description %></p>
-					<p><%= i.date %></p>
-					<p><%= i.categories %></p>
-				</li>
+					<li class="card-list">
+						<div id="card-wrapper">
+							<p><%= i.description %></p>
+							<p><%= i.date %></p>
+							<p><%= i.category %></p>
+						</div>
+						<div>
+							<a href="/delete-contact/?id=<%= i._id %>"><button>DELETE</button></a>
+						</div>
+					</li>
 				<% } %>
 			</ul>
 		</div>
