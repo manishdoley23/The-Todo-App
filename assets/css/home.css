@@ -79,7 +79,7 @@ body{
     background: none;
     padding-left: 20px;
     color: #a39797e6;
-    font-size: 13px;
+    font-size: 19px;
     /* transition: border 0.5s; */
 }
 #description-div input:hover{
@@ -185,6 +185,112 @@ body{
     background: #a39797e6;
     color: rgba(16, 14, 14, 0.71);
 }
+
+/* Card and delete button */
+.card{
+    /* background: red; */
+    width: 50%;
+    margin: 1px;
+}
+.card-delete-wrapper{
+    height: 11vh;
+    padding: 0;
+    background: #a39797e6;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+    position: relative;
+}
+.card-wrapper{
+    /* background: green; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.description-block{
+    text-align: center;
+    width: 40%;
+    border-right: 1px solid snow;
+    font-size: 14px;
+    font-family: 'Lato';
+    overflow:auto;
+    overflow-wrap: break-word;
+}
+.description-block h3{
+    /* border-bottom: 1px solid snow; */
+    color: rgb(69, 61, 18);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 1000;
+    letter-spacing: 3px;
+    padding-top: 10px;
+}
+.description-block p{
+    padding: 5px;
+    font-size: 18px;
+}
+.date-block{
+    width: 30%;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Lato';
+    border-right: 1px solid snow;
+}
+.date-block p{
+    padding: 5px;
+    font-size: 18px;
+}
+.date-block h3{
+    /* border-bottom: 1px solid snow; */
+    color: rgb(69, 61, 18);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 1000;
+    letter-spacing: 3px;
+    padding-top: 10px;
+}
+.category-block{
+    width: 30%;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Lato';
+}
+.category-block p{
+    padding: 5px;
+    font-size: 18px;
+}
+.category-block h3{
+    /* border-bottom: 1px solid snow; */
+    color: rgb(69, 61, 18);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 1000;
+    letter-spacing: 3px;
+    padding-top: 10px;
+}
+.delete-btn-block{
+    position: absolute;
+    /* height: inherit; */
+    left: 50vw;
+    top: 11px;
+}
+.delete-btn-block button{
+    background-color: rgb(149, 18, 18);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Lato';
+    padding: 12px;
+    border: 1px solid #a39797e6;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #a39797e6;
+}
+.delete-btn-block button:hover{
+    color: rgb(149, 18, 18);
+    background-color: #a39797e6;
+}
+
 
 
 

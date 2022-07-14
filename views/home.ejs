@@ -56,21 +56,32 @@
 						<button type="submit">Add Task</button>
 					</div>
 				</div>
-				
+
 			</form>
 		</div>
 		
-		<div id="card">
-			<ul>
+		<div class="card">
+			<ul style="list-style-type: none;">
 				<% for (let i of todo_list) { %>
 					<li class="card-list">
-						<div id="card-wrapper">
-							<p><%= i.description %></p>
-							<p><%= i.date %></p>
-							<p><%= i.category %></p>
-						</div>
-						<div>
-							<a href="/delete-contact/?id=<%= i._id %>"><button>DELETE</button></a>
+						<div class="card-delete-wrapper">
+							<div class="card-wrapper">
+								<div class="description-block">
+									<h3>DESCRIPTION</h3>
+									<p><%= i.description %></p>
+								</div>
+								<div class="date-block">
+									<h3>DUE DATE</h3>
+									<p><%= i.date %></p>
+								</div>
+								<div class="category-block">
+									<h3>CATEGORY</h3>
+									<p><%= i.category %></p>
+								</div>
+							</div>
+							<div class="delete-btn-block">
+								<a href="/delete-contact/?id=<%= i._id %>"><button>D</button></a>
+							</div>
 						</div>
 					</li>
 				<% } %>
