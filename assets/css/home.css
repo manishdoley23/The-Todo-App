@@ -12,6 +12,7 @@ dark grey white:- #a39797e6
 }
 
 body{
+    background-image: linear-gradient(to bottom right, #434343 0%, black 100%);
     font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
@@ -68,7 +69,7 @@ body{
 #description-div h3{
     text-transform: uppercase;
     color: #a39797e6;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 8px;
     padding: 20px;
     margin-bottom: -1vh;
@@ -94,7 +95,8 @@ body{
     height: 15vh;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid snow;
+    border: 1px solid snow;
+    border-top: 0;
 }
 /* category */
 #category-div{
@@ -106,7 +108,7 @@ body{
     text-transform: uppercase;
     color: #a39797;
     font-size: 13px;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 7px;
     padding: 20px;
 }
@@ -115,7 +117,7 @@ body{
     border: 2.2px solid #a39797e6;
     border-radius: 5px;
     padding: 2px;
-    font-size: 14px;
+    font-size: 17px;
     font-family: 'Lato';
     color:#a39797e6;
     background: rgba(16, 14, 14, 0.71);
@@ -127,7 +129,7 @@ body{
 #category-div select option{
     cursor: pointer;
     color: #050404e6;
-    font-size: 14px;
+    font-size: 17px;
     font-family: 'Lato';
     letter-spacing: 1px;
     text-align: left;
@@ -143,7 +145,7 @@ body{
     text-transform: uppercase;
     color: #a39797e6;
     font-size: 13px;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 5px;
     padding: 19px;
 }
@@ -152,7 +154,7 @@ body{
     border: 2.2px solid #a39797e6;
     border-radius: 5px;
     padding: 2px;
-    font-size: 14px;
+    font-size: 17px;
     color: #a39797e6;
     background: rgba(16, 14, 14, 0.71);
 }
@@ -165,6 +167,8 @@ body{
 
 /* Add Task */
 #add-task{
+    border: 1px solid snow;
+    border-top: 0;
     height: 10vh;
     display: flex;
     align-items: center;
@@ -193,6 +197,7 @@ body{
     margin: 1px;
 }
 .card-delete-wrapper{
+    border: 1px solid snow;
     height: 11vh;
     padding: 0;
     background: #a39797e6;
@@ -256,6 +261,7 @@ body{
     font-family: 'Lato';
 }
 .category-block p{
+    text-transform: capitalize;
     padding: 5px;
     font-size: 18px;
 }
@@ -272,15 +278,15 @@ body{
     position: absolute;
     /* height: inherit; */
     left: 50vw;
-    top: 11px;
+    top: 19px;
 }
 .delete-btn-block button{
     background-color: rgb(149, 18, 18);
     cursor: pointer;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 800;
     font-family: 'Lato';
-    padding: 12px;
+    padding: 13px;
     border: 1px solid #a39797e6;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -290,6 +296,7 @@ body{
     color: rgb(149, 18, 18);
     background-color: #a39797e6;
 }
+
 
 
 
